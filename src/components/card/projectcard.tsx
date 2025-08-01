@@ -54,7 +54,7 @@ export function ProjectCard() {
                         </p>
                     </div>
                 </div>
-                <div className='w-96 border rounded-lg border-buttonBorderColor bg-buttonBorderColor'>
+                <div className='w-96 border rounded-lg border-CardBg bg-CardBg'>
                     <div className="p-2">
                         <img src={CousuMouche} className="w-1/5" />
                     </div>

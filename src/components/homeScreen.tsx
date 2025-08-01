@@ -95,7 +95,7 @@ function HomePageFirstSection({ showTyped, showTitle, socialNetworkInformation }
                     </span>
                     </p>
                     <br />
-                    <p className="text-sm pr-40">Suite à une reconversion professionnelle il y a de cela 5 ans, je développe des applications webs et mobiles en React et React Native</p>
+                    <p className="text-sm pr-40">Suite à une reconversion professionnelle il y a de cela 5 ans à EPITECH, je développe des applications webs et mobiles en React et React Native</p>
                     <br />
                     <div className="flex flex-row gap-2">
                         {socialNetworkInformation.map((item, index) => (
@@ -157,15 +157,16 @@ export function SkillsSection() {
             <div className="mt-20 flex flex-1/6 justify-center ">
                 <p>Skills</p>
             </div>
-            <div className="mt-20 flex flex-1/3 flex-row justify-evenly text-lg">
+            <div className="mt-20 flex flex-1/3 flex-row justify-evenly items-center lg:text-lg xl:text-xl">
                 <div className="flex flex-col gap-4">
                     <p className="font-bold mb-5">
                         Front-end
                     </p>
                     <div className="flex flex-row gap-1 items-center">
-                        <FaHtml5 />
-                        <p>HTML</p>
+                        <FaReact />
+                        <p>React</p>
                     </div>
+                    
                     <div className="flex flex-row gap-1 items-center">
                         <FaJs />
                         <p>Javascript</p>
@@ -175,9 +176,10 @@ export function SkillsSection() {
                         <p>Typescript</p>
                     </div>
                     <div className="flex flex-row gap-1 items-center">
-                        <FaReact />
-                        <p>React</p>
+                        <FaHtml5 />
+                        <p>HTML</p>
                     </div>
+                    
                 </div>
                 <div className="flex flex-col gap-4">
                     <p className=" font-bold mb-5">
