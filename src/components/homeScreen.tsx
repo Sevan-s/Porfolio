@@ -46,8 +46,8 @@ export function HomeScreen() {
     }, [])
 
     return (
-        <div className="w-full flex flex-col h-screen overflow-y-scroll snap-y scroll-smooth snap-always">
-            <section className="h-screen snap-start flex items-center justify-center">
+        <div className="w-full flex flex-col lg:h-screen min-h-screen overflow-y-scroll ">
+            <section className="lg:h-screen flex items-center justify-center">
                 <FadeSection>
                     <HomePageFirstSection
                         showTyped={showTyped}
@@ -56,18 +56,16 @@ export function HomeScreen() {
                     />
                 </FadeSection>
             </section>
-            <section className="snap-start flex items-center bg-secondBgColor justify-center text-white text-4xl">
+            <section className=" flex items-center bg-secondBgColor justify-center text-white text-4xl">
                 <FadeSection>
                     <div className="h-screen w-screen">
                         <SkillsSection />
                     </div>
                 </FadeSection>
             </section>
-            <section className="snap-start flex items-center justify-center text-white text-4xl">
+            <section className=" flex items-center justify-center text-white text-4xl">
                 <FadeSection>
-                    <div className="h-screen">
-                        <ProjectSection />
-                    </div>
+                    <ProjectSection />
                 </FadeSection>
             </section>
         </div>
@@ -77,10 +75,15 @@ export function HomeScreen() {
 function HomePageFirstSection({ showTyped, showTitle, socialNetworkInformation }: { showTyped: boolean, showTitle: boolean, socialNetworkInformation: IsnInformation[] }) {
 
     return (
-        <div className="flex flex-col justify-center w-full h-screen">
+        <div className="flex flex-col justify-center w-full lg:h-screen overflow-y-auto mt-5">
             <div className="flex flex-row flex-1/3"></div>
-            <div className="flex flex-row flex-1/3">
-                <div className={`flex flex-col justify-center text-3xl ${showTitle === false ? 'opacity-0' : 'opacity-100'} transition-all transition-discrete duration-700 w-1/2 flex-1/2 pl-40 pr-10`}>
+            <div className="flex flex-col-reverse items-center gap-10 md:flex-row flex-1/3">
+                <div className={`flex flex-col justify-center text-3xl ${showTitle === false ? 'opacity-0' : 'opacity-100'} transition-all transition-discrete duration-700 md:w-1/2 flex-1/2 
+                lg:pl-40 
+                md:pl-20  
+                pl-5
+                pr-5
+                `}>
                     <p>Bonjour, je m'appelle</p>
                     <p className="text-6xl">Sevan Sarikaya</p>
                     <p className="mt-2">et je suis <span className="text-animatedText ">
@@ -89,15 +92,16 @@ function HomePageFirstSection({ showTyped, showTitle, socialNetworkInformation }
                                 strings={["développeur Fullstack", "développeur web", "développeur mobile"]}
                                 typeSpeed={30}
                                 backSpeed={50}
+                                className="text-[#3480c7]"
                                 loop
                             />
                         )}
                     </span>
                     </p>
                     <br />
-                    <p className="text-sm pr-40">Suite à une reconversion professionnelle il y a de cela 5 ans à EPITECH, je développe des applications webs et mobiles en React et React Native</p>
+                    <p className="text-lg">Suite à une reconversion professionnelle il y a de cela 5 ans à EPITECH, je développe des applications webs et mobiles en React et React Native</p>
                     <br />
-                    <div className="flex flex-row gap-2">
+                    <div className="flex flex-row flex-wrap gap-2 w-[100%]">
                         {socialNetworkInformation.map((item, index) => (
                             <div
                                 key={index}
@@ -114,51 +118,50 @@ function HomePageFirstSection({ showTyped, showTitle, socialNetworkInformation }
                         ))}
                     </div>
                 </div>
-                <div className={`flex flex-col justify-center items-center ml-10 text-3xl w-1/2 flex-1/2`}>
-                    <div className="w-1/2 overflow-hidden rounded-full aspect-square " >
+                <div className={`flex flex-col justify-center items-center w-3/5 ml-10 md:w-1/2 flex-1/2`}>
+                    <div className="xl:w-1/2 overflow-hidden rounded-full aspect-square mr-10" >
                         <img
                             src={Me}
                             className="w-full h-full object-cover scale-300 origin-[10%_15%] opacity-0 animate-zoom-out"
                             style={{ animationDelay: '2s' }}
-                            alt="Moi"
+                            alt="Sarikaya Sevan"
                         />
                     </div>
                 </div>
             </div>
-            <div className=" flex items-end flex-1/3 pb-5">
-                <div className="flex flex-row justify-evenly w-screen">
-                    <p className="text-2xl  flex flex-row items-center font-bold gap-2">3+
-                        <span className="text-lg font-normal">
+            <div className=" flex items-end flex-1/3 pb-5 mt-5 ">
+                <div className="flex flex-row justify-evenly w-screen mx-2">
+                    <p className="text-2xl flex flex-wrap mx-2 flex-row items-center font-bold gap-1 justify-center">3+
+                        <span className="text-[14px] text-lg font-normal text-center">
                             années d'expériences
                         </span>
                     </p>
-                    <div className="w-px h-12 bg-gray-300 self-center" />
-                    <p className="text-2xl w-60  flex flex-row items-center font-bold gap-2">10+
-                        <span className="text-lg font-normal">
-                            projets réalisés web et mobiles
+                    <div className="w-px h-16 bg-gray-300 self-center" />
+                    <p className="text-2xl w-60 flex-wrap mx-2 flex flex-row items-center font-bold gap-1 justify-center">10+
+                        <span className="text-[14px] text-lg font-normal text-center">
+                            projets réalisés
                         </span>
                     </p>
-                    <div className="w-px h-12 bg-gray-300 self-center" />
-                    <p className="text-2xl  flex flex-row items-center font-bold gap-2">100%
-                        <span className="text-lg font-normal">
+                    <div className="w-px h-16 bg-gray-300 self-center" />
+                    <p className="text-2xl flex flex-wrap mx-2 flex-row items-center font-bold gap-1 justify-center">100%
+                        <span className="text-[14px] text-lg font-normal text-center">
                             de satisfaction
                         </span>
                     </p>
                 </div>
             </div>
-
         </div>
     )
 }
 
 export function SkillsSection() {
     return (
-        <div className="pt-20 w-full h-full flex flex-col">
+        <div className="sm:pt-20 w-full h-full flex flex-col">
             <div className="mt-20 flex flex-1/6 justify-center ">
                 <p>Skills</p>
             </div>
-            <div className="mt-20 flex flex-1/3 flex-row justify-evenly items-center lg:text-lg xl:text-xl">
-                <div className="flex flex-col gap-4">
+            <div className="mt-20 flex flex-1/3 flex-wrap gap-x-12 gap-y-12 flex-row justify-evenly items-center lg:text-lg xl:text-xl md:text-md text-sm mx-18 s:mx-6 ls:mx-26">
+                <div className="flex flex-col gap-4 h-56">
                     <p className="font-bold mb-5">
                         Front-end
                     </p>
@@ -166,7 +169,7 @@ export function SkillsSection() {
                         <FaReact />
                         <p>React</p>
                     </div>
-                    
+
                     <div className="flex flex-row gap-1 items-center">
                         <FaJs />
                         <p>Javascript</p>
@@ -179,9 +182,9 @@ export function SkillsSection() {
                         <FaHtml5 />
                         <p>HTML</p>
                     </div>
-                    
+
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 h-56">
                     <p className=" font-bold mb-5">
                         Back-end
                     </p>
@@ -202,7 +205,7 @@ export function SkillsSection() {
                         <p>Strapi</p>
                     </div>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4  h-56">
                     <p className=" font-bold mb-5">
                         Design
                     </p>
@@ -219,7 +222,7 @@ export function SkillsSection() {
                         <p>CSS</p>
                     </div>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 h-56">
                     <p className="font-bold mb-5">
                         Autres
                     </p>
@@ -241,4 +244,3 @@ export function SkillsSection() {
         </div>
     )
 }
-
