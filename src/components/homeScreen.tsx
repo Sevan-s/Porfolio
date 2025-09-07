@@ -99,7 +99,7 @@ function HomePageFirstSection({ showTyped, showTitle, socialNetworkInformation }
                     </span>
                     </p>
                     <br />
-                    <p className="text-lg">Suite à une reconversion professionnelle il y a de cela 5 ans à EPITECH, je développe des applications webs et mobiles en React et React Native</p>
+                    <p className="text-lg">Développeur full stack spécialisé en React, Node.js et React Native, je crée des applications web et mobiles modernes, performantes et adaptées aux besoins des utilisateurs.</p>
                     <br />
                     <div className="flex flex-row flex-wrap gap-2 w-[100%]">
                         {socialNetworkInformation.map((item, index) => (
