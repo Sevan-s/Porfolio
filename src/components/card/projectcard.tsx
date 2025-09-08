@@ -49,7 +49,7 @@ export function ProjectCard() {
                     </div>
                     <div className=" flex p-3">
                         <p>
-                            Création d'un site vitrine et d'un dashboard client. Ce projet destiné au agriculteur avait pour but d'automatiser la détection de Datura d'une parcelle agricole.
+                            Création d'un site vitrine et d'un dashboard client. Ce projet destiné aux agriculteurs avait pour but d'automatiser la détection de Datura d'une parcelle agricole.
                             L'utilisateur avait la possibilité de programmer ses drones et de visualiser les zones infectées par le Datura.
                         </p>
                     </div>
