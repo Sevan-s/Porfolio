@@ -143,9 +143,9 @@ function HomePageFirstSection({ showTyped, showTitle, socialNetworkInformation }
                         </span>
                     </p>
                     <div className="w-px h-16 bg-gray-300 self-center" />
-                    <p className="text-2xl flex flex-wrap mx-2 flex-row items-center font-bold gap-1 justify-center">100%
+                    <p className="text-2xl w-60 flex flex-wrap mx-2 flex-row items-center font-bold gap-1 justify-center">Stack :
                         <span className="text-[14px] text-lg font-normal text-center">
-                            de satisfaction
+                            React, Node.js, Go, PostgreSQL, typeScript
                         </span>
                     </p>
                 </div>
