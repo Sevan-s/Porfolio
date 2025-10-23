@@ -160,7 +160,7 @@ export function SkillsSection() {
             <div className="mt-20 flex flex-1/6 justify-center ">
                 <p>Skills</p>
             </div>
-            <div className="mt-20 flex flex-1/3 flex-wrap gap-x-12 gap-y-12 flex-row justify-evenly items-center lg:text-lg xl:text-xl md:text-md text-sm mx-18 s:mx-6 ls:mx-26">
+            <div className="mt-20 flex flex-1/3 flex-wrap gap-x-12 gap-y-12 flex-row justify-evenly items-center lg:text-lg xl:text-xl md:text-md text-sm mx-2 s:mx-6 ls:mx-26 xxs:mx-16 xs:mx-20">
                 <div className="flex flex-col gap-4 h-56">
                     <p className="font-bold mb-5">
                         Front-end
