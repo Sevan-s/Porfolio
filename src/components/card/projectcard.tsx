@@ -22,52 +22,44 @@ export function ProjectSection() {
 export function ProjectCard() {
     return (
         <div className="text-lg w-full flex justify-center lg:h-full">
-            <div className="flex flex-wrap justify-center lg:gap-20 gap-5 lg:h-full ">
+            <div className="flex flex-wrap justify-center lg:gap-20 gap-5 lg:h-full items-stretch">
                 <div className='w-[90%] border rounded-lg border-CardBg bg-CardBg xs:w-96'>
-                    <div className="p-2">
-                        <img src={Swapios} className="w-1/3" alt='Logo Swapios' />
-                    </div>
-                    <div className='pl-3 font-bold'>
-                        <p>
-                            Swapios
-                        </p>
+                    <div className="flex flex-row items-center justify-between p-2 ">
+                        <p className="text-lg font-medium">Swapios</p>
+                        <img
+                            src={Swapios}
+                            alt="Logo Swapios"
+                            className="w-[120px] h-auto"
+                        />
                     </div>
                     <div className="flex p-3">
-                        <p>Développement d'une application mobile (style Messenger) destinée au professionnel de santé.
-                            Mise en place d'appel et de partage de fichier entre deux personnes afin de poser un diagnostique avec un confrère en cas de doute ou de l'avis d'un spécialiste.
+                        <p>Développement d'une application mobile (type "Messenger") destinée aux professionnels de santé.
+                            Mise en place d'appels et de partage de fichiers entre confrères afin de poser un diagnostique partagé et orientation vers un spécialiste.
                         </p>
                     </div>
                 </div>
-                <div className='w-[90%] border rounded-lg border-CardBg bg-CardBg xs:w-96'>
-                    <div className="p-2 pt-6">
-                        <img src={LogoHoori} className="w-1/3" alt='Logo Hoori'/>
+                <div className="w-[90%] border rounded-lg border-CardBg bg-CardBg xs:w-96 p-4">
+                    <div className="flex items-center justify-between mb-3">
+                        <p className="text-lg font-bold">Hoori</p>
+                        <img src={LogoHoori} alt="Logo Hoori" className="w-[100px] h-auto" />
                     </div>
-                    <div className='pl-3 font-bold'>
-                        <p>
-                            Hoori
-                        </p>
-                    </div>
-                    <div className=" flex p-3">
-                        <p>
-                            Création d'un site vitrine et d'un dashboard client. Ce projet destiné aux agriculteurs avait pour but d'automatiser la détection de Datura d'une parcelle agricole.
-                            L'utilisateur avait la possibilité de programmer ses drones et de visualiser les zones infectées par le Datura.
-                        </p>
-                    </div>
+                    <p className="p-2">
+                        Création d'un site vitrine et d'un dashboard client à destination des agriculteurs.
+                        Objectif : automatiser la détection de Datura d'une parcelle agricole.
+                        L'utilisateur programme ses drones et visualise les zones infectées par le Datura.
+                    </p>
                 </div>
-                <div className='w-[90%] border rounded-lg border-CardBg bg-CardBg xs:w-96'>
-                    <div className="p-2">
-                        <img src={CousuMouche} className="w-1/5" alt='Logo Cousu Mouche' />
+                <div className="w-[90%] border rounded-lg border-CardBg bg-CardBg xs:w-96 p-4 ">
+                    <div className="flex items-center justify-between mb-3">
+                        <p className="text-lg font-bold">Cousu Mouche</p>
+                        <img src={CousuMouche} alt="Logo Cousu Mouche" className="w-[80px] h-auto" />
                     </div>
-                    <div className='pl-3 font-bold'>
-                        <p>
-                            Cousu Mouche
-                        </p>
-                    </div>
-                    <div className=" flex p-3">
-                        <p>
-                            Site E-Commerce réalisé pour une artisane du sud de la France. Mise en place d'une authentifaction, d'un dashboard admin afin qu'elle puisse ajouter, modifier ou supprimer facilement des produits de sa boutique en ligne et d'un back-end en express Js.
-                        </p>
-                    </div>
+                    <p className="p-2">
+                        Site E-Commerce réalisé pour une artisane couturière. Mise en place d'une authentification,
+                        d'un dashboard administrateur afin que l'utilisatrice puisse faire évoluer son projet
+                        avec un maximum d'autonomie (ajouter, modifier ou supprimer facilement des produits
+                        de sa boutique en ligne). Mise en place d'un back-end en Express.js.
+                    </p>
                 </div>
             </div>
         </div>

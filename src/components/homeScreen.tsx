@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import Me from '../assets/images/sev.jpg'
 import { SocialNetworkButton } from "./buttons/SocialNetworkButton"
-import { FaLinkedin, FaGithub, FaEnvelope, FaDiscord, FaJs, FaReact, FaNodeJs, FaFigma, FaCss3Alt, FaDocker, FaGitAlt } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaDiscord, FaJs, FaReact, FaNodeJs, FaFigma, FaCss3Alt, FaDocker, FaGitAlt, FaFilePdf } from "react-icons/fa";
 import { SiMalt, SiPostgresql, SiStrapi, SiTailwindcss } from "react-icons/si";
 import { ProjectSection } from "./card/projectcard";
 import { ReactTyped } from "react-typed";
@@ -21,13 +21,7 @@ export function HomeScreen() {
     const [showTyped, setShowTyped] = useState(false);
 
 
-    const socialNetworkInformation = [
-        { image: FaLinkedin, title: "Linkedin", link: "https://www.linkedin.com/in/sevan-sarikaya/" },
-        { image: FaGithub, title: "Github", link: "https://github.com/Sevan-s/" },
-        { image: FaEnvelope, title: "sevan.sarikaya@gmail.com", link: "mailto:sevan.sarikaya@gmail.com" },
-        { image: SiMalt, title: "Malt", link: "https://www.malt.fr/profile/sarikayasevan" },
-        { image: FaDiscord, title: "Discord", link: "https://discord.com/users/yushinzo" },
-    ]
+
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -52,7 +46,6 @@ export function HomeScreen() {
                     <HomePageFirstSection
                         showTyped={showTyped}
                         showTitle={showTitle}
-                        socialNetworkInformation={socialNetworkInformation}
                     />
                 </FadeSection>
             </section>
@@ -72,7 +65,15 @@ export function HomeScreen() {
     )
 }
 
-function HomePageFirstSection({ showTyped, showTitle, socialNetworkInformation }: { showTyped: boolean, showTitle: boolean, socialNetworkInformation: IsnInformation[] }) {
+function HomePageFirstSection({ showTyped, showTitle }: { showTyped: boolean, showTitle: boolean}) {
+    const socialNetworkInformation = [
+        { image: FaLinkedin, title: "Linkedin", link: "https://www.linkedin.com/in/sevan-sarikaya/", download: false },
+        { image: FaGithub, title: "Github", link: "https://github.com/Sevan-s/", download: false },
+        { image: FaEnvelope, title: "sevan.sarikaya@gmail.com", link: "mailto:sevan.sarikaya@gmail.com", download: false },
+        { image: SiMalt, title: "Malt", link: "https://www.malt.fr/profile/sarikayasevan", download: false },
+        { image: FaDiscord, title: "Discord", link: "https://discord.com/users/yushinzo", download: false },
+        { image: FaFilePdf, title: "CV", link: "/cv_sevan_sarikaya.pdf", download: true },
+    ]
 
     return (
         <div className="flex flex-col justify-center w-full lg:h-screen overflow-y-auto mt-5">
@@ -99,7 +100,7 @@ function HomePageFirstSection({ showTyped, showTitle, socialNetworkInformation }
                     </span>
                     </p>
                     <br />
-                    <p className="text-lg">Développeur full stack spécialisé en React, Node.js et React Native, je crée des applications web et mobiles modernes, performantes et adaptées aux besoins des utilisateurs.</p>
+                    <p className="text-lg">Spécialisé en React, Node.js et React Native, je crée des applications web et mobiles modernes, performantes et adaptées aux besoins des utilisateurs.</p>
                     <br />
                     <div className="flex flex-row flex-wrap gap-2 w-[100%]">
                         {socialNetworkInformation.map((item, index) => (
@@ -112,6 +113,7 @@ function HomePageFirstSection({ showTyped, showTitle, socialNetworkInformation }
                                     image={item.image}
                                     title={item.title}
                                     link={item.link}
+                                    download={item.download}
                                 />
                             </div>
 
@@ -131,19 +133,19 @@ function HomePageFirstSection({ showTyped, showTitle, socialNetworkInformation }
             </div>
             <div className=" flex items-end flex-1/3 pb-5 mt-5 ">
                 <div className="flex flex-row justify-evenly w-screen mx-2">
-                    <p className="text-2xl flex flex-wrap mx-2 flex-row items-center font-bold gap-1 justify-center">3+
+                    <p className="text-2xl sm:w-100 w-60 flex flex-wrap mx-2 flex-row items-end font-bold gap-1 justify-center">3+
                         <span className="text-[14px] text-lg font-normal text-center">
-                            années d'expériences
+                            années d'expérience
                         </span>
                     </p>
-                    <div className="w-px h-16 bg-gray-300 self-center" />
-                    <p className="text-2xl w-60 flex-wrap mx-2 flex flex-row items-center font-bold gap-1 justify-center">10+
+                    <div className="w-px h-16 sm:h-10 bg-gray-300 self-end" />
+                    <p className="text-2xl sm:w-100 w-60 flex-wrap mx-2 flex flex-row items-end font-bold gap-1 justify-center">10+
                         <span className="text-[14px] text-lg font-normal text-center">
                             projets réalisés
                         </span>
                     </p>
-                    <div className="w-px h-16 bg-gray-300 self-center" />
-                    <p className="text-2xl w-60 flex flex-wrap mx-2 flex-row items-center font-bold gap-1 justify-center">Stack :
+                    <div className="w-px h-16 sm:h-10 bg-gray-300 self-end" />
+                    <p className="text-2xl sm:w-100 w-60 flex flex-wrap mx-2 flex-row items-end font-bold gap-1 justify-center">Stack :
                         <span className="text-[14px] text-lg font-normal text-center">
                             React, Node.js, Go, PostgreSQL, TypeScript
                         </span>
